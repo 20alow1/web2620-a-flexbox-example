@@ -1,1 +1,85 @@
-// Your styles go here
+html {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+}
+
+nav ul, aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul > li {
+    display: inline-block;
+}
+
+nav, footer {
+    background-color: lightblue;
+}
+
+aside {
+    background-color: aliceblue;
+}
+
+header {
+    font-size: 3rem;
+}
+
+/* Flexbox styling starts here */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+aside {
+    flex: 0 1 150px;
+    order: -1;
+}
+
+article {
+    flex: 1 1 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 500px) {
+    nav {
+        flex-direction: row;
+    }
+    
+    main {
+        flex-direction: row;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    footer a {
+        padding-right: 10px;
+    }
+
+    footer a:last-of-type {
+        flex-grow: 1;
+    }
+}
